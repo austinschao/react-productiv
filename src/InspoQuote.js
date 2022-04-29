@@ -4,6 +4,16 @@ import React, { useState } from "react";
 
 const BASE_API_URL = "https://inspo-quotes-api.herokuapp.com/quotes/random";
 
+/** Show insp quote and make api request.
+ *
+ * Props
+ * - none
+ *
+ * State
+ * - quote
+ *
+ * App -> Inspquote -> { Quote }
+ */
 function InspoQuote() {
   const [quote, setQuote] = useState("");
 
