@@ -11,7 +11,6 @@ import EditableTodo from "./EditableTodo";
  */
 
 function TodoForm({ initialFormData, handleSave }) {
-  const { title, description, priority } = initialFormData;
   const [formData, setFormData] = useState(initialFormData);
 
   /** Update form input. */
@@ -36,7 +35,7 @@ function TodoForm({ initialFormData, handleSave }) {
           className="form-control"
           placeholder="Title"
           onChange={handleChange}
-          value={title}
+          value={formData.title}
           aria-label="Title"
         />
       </div>
@@ -48,7 +47,7 @@ function TodoForm({ initialFormData, handleSave }) {
           className="form-control"
           placeholder="Description"
           onChange={handleChange}
-          value={description}
+          value={formData.description}
           aria-label="Description"
         />
       </div>
@@ -61,7 +60,7 @@ function TodoForm({ initialFormData, handleSave }) {
           <select
             id="newTodo-priority"
             name="priority"
-            value={priority}
+            value={formData.priority}
             onChange={handleChange}
             className="form-control form-control-sm d-inline-flex"
           >
