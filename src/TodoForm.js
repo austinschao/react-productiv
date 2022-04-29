@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import EditableTodo from "./EditableTodo";
 
 /** Form for adding.
  *
@@ -10,13 +11,8 @@ import React, { useState } from "react";
  */
 
 function TodoForm({ initialFormData, handleSave }) {
-  const emptyFormData = {
-    title: "",
-    description: "",
-    priority: 1,
-  };
-  const { title, description, priority } = emptyFormData;
-  const [formData, setFormData] = useState(initialFormData || emptyFormData);
+  const { title, description, priority } = initialFormData;
+  const [formData, setFormData] = useState(initialFormData);
 
   /** Update form input. */
   function handleChange(evt) {

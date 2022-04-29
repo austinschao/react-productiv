@@ -12,7 +12,7 @@ function Todo({ id, title, priority, description }) {
   return (
     <div id={id} className="Todo">
       <div>
-        <b>{title}</b> <small>{priority}</small>
+        <b>{title}</b> <small>(Priority: {priority})</small>
       </div>
       <div>
         <small>{description}</small>
