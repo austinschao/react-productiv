@@ -23,13 +23,15 @@ const testTodos = [
   },
 ];
 
-describe("productiv app", function () {
+describe("EditiableTodoList app", function () {
   it("renders without crashing", function () {
     render(<EditableTodoList todos={testTodos} />);
   });
 
   it("contains expected title", function () {
-    const result = render(<EditableTodoList />);
-    expect(result.queryByText("Prøductïv")).toBeInTheDocument();
+    const result = render(<EditableTodoList todos={testTodos} />);
+    expect(result.queryByText("Code!")).toBeInTheDocument();
+    expect(result.queryByText("Make dinner")).toBeInTheDocument();
+    expect(result.queryByText("Go to bed")).toBeInTheDocument();
   });
 });
