@@ -10,7 +10,10 @@ import EditableTodo from "./EditableTodo";
  * { TodoApp, EditableTodo } -> TodoForm
  */
 
-function TodoForm({ initialFormData, handleSave }) {
+function TodoForm({
+  initialFormData = { title: "", description: "", priority: 1 },
+  handleSave,
+}) {
   const [formData, setFormData] = useState(initialFormData);
 
   /** Update form input. */
@@ -23,7 +26,7 @@ function TodoForm({ initialFormData, handleSave }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     handleSave(formData);
-    initialFormData ? setFormData(formData) : setFormData(initialFormData);
+    setFormData(initialFormData);
   }
 
   return (
