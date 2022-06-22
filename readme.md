@@ -7,7 +7,6 @@
 
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -15,7 +14,6 @@
 * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -38,8 +36,6 @@ To run tests:
     $ npm test
     Then press 'a' to run all tests
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- ROADMAP -->
